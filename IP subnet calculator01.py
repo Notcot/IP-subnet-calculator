@@ -7,7 +7,6 @@ def listli_to_str(aa: list):
     return ".".join(holder)
 
 input_ip = input("Enter ip address with CIDR included, like: xxx.xxx.xxx.xxx/xx  ")
-#input_ip = "192.168.68.114/24"
 
 ip_list = re.split(r"[./]", input_ip)
 int_ip_list = []
@@ -63,10 +62,6 @@ last_available[-1] -= 1
 total_addr = 2**(32 - cidr)
 usable_host = total_addr - 2
 
-#print(network_addr)
-#print(broadcast_addr)
-#print(first_available)
-#print(last_available)
 
 print("------------------------------------------------------")
 print("------------------------------------------------------")
