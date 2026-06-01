@@ -23,7 +23,11 @@ for i in range(0, a):
     subnet_num += start_bin 
     start_bin /= 2
 
-subnet_num = int(subnet_num)
+if a == 0:
+    subnet_num = 255
+else:
+    subnet_num = int(subnet_num)
+
 magic_num = 256 - subnet_num
 
 if cidr in range(9, 17):
@@ -61,7 +65,6 @@ last_available[-1] -= 1
 
 total_addr = 2**(32 - cidr)
 usable_host = total_addr - 2
-
 
 print("------------------------------------------------------")
 print("------------------------------------------------------")
